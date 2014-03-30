@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
@@ -43,3 +44,24 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'httparty'
+gem 'simple_form'
+
+group :development do
+  gem 'better_errors'
+  gem 'awesome_print'
+  gem 'quiet_assets'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+end
+
+group :development, :test do |variable|
+  gem 'rspec-rails'
+  gem 'dotenv'
+end
