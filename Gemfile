@@ -61,7 +61,7 @@ group :test do
   gem 'database_cleaner'
 end
 
-group :development, :test do |variable|
+group :development, :test do
   gem 'rspec-rails'
   gem 'dotenv'
 end
