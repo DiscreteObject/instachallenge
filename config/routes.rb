@@ -17,4 +17,6 @@ Instachallenge::Application.routes.draw do
   root 'pages#main'
 
   get 'search', to: 'pages#search'
+
+  resources :photos, only: [:create, :show]
 end
