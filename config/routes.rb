@@ -15,4 +15,6 @@ Instachallenge::Application.routes.draw do
   #   resources :products
 
   root 'pages#main'
+
+  get 'search', to: 'pages#search'
 end
