@@ -47,6 +47,7 @@ end
 
 gem 'httparty'
 gem 'simple_form'
+gem 'will_paginate', '~> 3.0'
 
 group :development do
   gem 'better_errors'
