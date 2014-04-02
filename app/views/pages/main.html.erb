@@ -1,6 +1,7 @@
 <h2>Welcome to Instachallenge</h2>
 <p>Enter location info and radius</p>
 
+<div id="search-form">
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:lat_coord, "Latitude:") %>
   <%= text_field_tag(:latitude) %><br />
@@ -10,3 +11,4 @@
   <%= text_field_tag(:distance) %><br />
   <%= submit_tag("Search") %>
 <% end %>
+</div>

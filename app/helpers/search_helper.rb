@@ -1,6 +1,6 @@
 module SearchHelper
   def get_photos(query)
-    query_string = 'https://api.instagram.com/v1/media/search?lat=' + query.latitude + '&lng=' + query.longitude + '&distance=' + query.distance + '&client_id=' + ENV['INSTAGRAM_CLIENT_ID']
+    query_string = 'https://api.instagram.com/v1/media/search?lat=' + query.latitude + '&lng=' + query.longitude + '&distance=' + (query.distance * 1000) + '&client_id=' + ENV['INSTAGRAM_CLIENT_ID']
 
     photo_results_data = JSON(HTTParty.get(query_string).body)['data']
     current_photos = []

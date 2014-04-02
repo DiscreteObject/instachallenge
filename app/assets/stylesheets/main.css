@@ -1,0 +1,16 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: #eae8e0;
+  text-align: center;
+}
+
+body h2 {
+	margin-top: 20px;
+}
+
+#search-form {
+	text-align: left;
+	margin: 10px 100px;
+	
+}
