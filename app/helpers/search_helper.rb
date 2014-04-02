@@ -7,7 +7,7 @@ module SearchHelper
     current_photos = []
     photo_results_data.each do |photo|
       new_photo = Photo.new
-      new_photo.type = photo['type']
+      new_photo.post_type = photo['type']
       new_photo.link = photo['link']
       new_photo.username = photo['user']['username']
       new_photo.low_url = photo['images']['low_resolution']['url']

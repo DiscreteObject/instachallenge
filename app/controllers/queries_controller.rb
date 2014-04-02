@@ -2,27 +2,23 @@ class QueriesController < ApplicationController
 
   include SearchHelper
 
-  def create
-    # search_params = {
-    #   :lat => params[:latitude],
-    #   :long => params[:longitude],
-    #   :dist => params[:distance] * 1000
-    # }
-  
+  def create 
     @query = Query.new(post_params)
     @query.save
-    @photos = Photo.paginate(:page => params[:page], :per_page => 5)
     @current_photos = get_photos(@query)
     @current_photos.each do |photo|
       photo.queries << @query
       photo.save
     end
 
-    render :search
+    redirect_to query_path(@query)
   end
 
-  def show 
-
+  def show
+    @query = Query.find(params[:id])
+    @page_number = params[:page]
+    @photos = @query.photos
+    @paginated_photos = @photos.paginate(:page => params[:page], :per_page => 5)
 
   end
 
