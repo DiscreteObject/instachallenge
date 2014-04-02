@@ -1,6 +1,10 @@
-<div class="photo-box">
-	<%= photo.link %><br>
-	<%= photo.username %><br>
-	<%= photo.thumb_url %>
+<div class="photo-container">
+
+	<div class="photo-box">
+		<%= image_tag(photo.std_url, :size => "612x612") %>
+	</div>
+
+	<p class="photo-link"><%= link_to photo.link, photo.link %></p><br>
+	<p class="photo-author"><%= photo.username %></p>
 
 </div>
