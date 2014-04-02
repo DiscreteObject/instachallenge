@@ -1,6 +1,6 @@
-class CreateSearchQueries < ActiveRecord::Migration
+class CreateQueries < ActiveRecord::Migration
   def change
-    create_table :search_queries do |t|
+    create_table :queries do |t|
       t.string :latitude
       t.string :longitude
       t.string :distance
