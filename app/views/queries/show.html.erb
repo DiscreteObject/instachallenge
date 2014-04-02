@@ -1,0 +1,5 @@
+<h2>Here are your results:</h2>
+
+<%= will_paginate @paginated_photos %>
+
+<%= render partial: "photos/photo", collection: @current_page_photos, as: :photo %>

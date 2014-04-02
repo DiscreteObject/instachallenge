@@ -3,10 +3,10 @@
 
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:lat_coord, "Latitude:") %>
-  <%= text_field_tag(:search_lat) %><br />
+  <%= text_field_tag(:latitude) %><br />
   <%= label_tag(:long_coord, "Longitude:") %>
-  <%= text_field_tag(:search_long) %><br />
+  <%= text_field_tag(:longitude) %><br />
   <%= label_tag(:distance, "Distance (in km):") %>
-  <%= text_field_tag(:search_distance) %><br />
+  <%= text_field_tag(:distance) %><br />
   <%= submit_tag("Search") %>
 <% end %>
