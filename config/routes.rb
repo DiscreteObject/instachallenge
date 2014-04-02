@@ -3,7 +3,5 @@ Instachallenge::Application.routes.draw do
 
   get 'search', to: 'queries#create'
 
-  resources :photos, only: [:create, :show]
-
   resources :queries, only: [:create, :show]
 end
