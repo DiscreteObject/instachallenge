@@ -16,9 +16,13 @@ class QueriesController < ApplicationController
 
   def show
     @query = Query.find(params[:id])
-    @page_number = params[:page]
-    @photos = @query.photos
-    @paginated_photos = @photos.paginate(:page => params[:page], :per_page => 5)
+    page_number = params[:page] ? params[:page].to_i : 1
+    per_page_count = 5
+    @current_page_photos = []
+    @query.photos.each_with_index do |photo, i|
+      @current_page_photos << photo if i / per_page_count == page_number - 1
+    end
+    @paginated_photos = @query.photos.paginate(:page => params[:page], :per_page => per_page_count)
 
   end
 

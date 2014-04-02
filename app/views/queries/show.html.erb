@@ -2,4 +2,4 @@
 
 <%= will_paginate @paginated_photos %>
 
-<%= render partial: "photos/photo", collection: @photos, as: :photo %>
+<%= render partial: "photos/photo", collection: @current_page_photos, as: :photo %>
